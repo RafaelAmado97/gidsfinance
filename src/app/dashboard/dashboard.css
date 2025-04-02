@@ -1,0 +1,508 @@
+* {
+  font-family: "Mulish", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+p,
+span {
+  font-weight: 400;
+}
+/* Container principal */
+.dashboard-container {
+  font-family: Arial, sans-serif;
+  background-color: #0f0e11;
+  color: white;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+/* Navegação */
+.dashboard-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 1rem;
+}
+
+.dashboard-nav .logo {
+  margin-right: 1rem;
+}
+
+.dashboard-nav h1{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: #71717a 1px solid;
+}
+
+.user img{
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.nav-menu li {
+  font-size: 0.755rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Estilo do item ativo */
+.nav-menu .active a {
+  color: #339fc7; /* Cor do texto */
+}
+
+/* Cabeçalho */
+.dashboard-header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header .btn{
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha o texto e a imagem verticalmente */
+  gap: 1rem; /* Espaçamento entre o texto e a imagem */
+  background-color: #141414;
+  border-radius: 20%;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.dashboard-header .btn:hover {
+  background-color: #71717A; /* Cor de fundo ao passar o mouse */
+}
+
+.dashboard-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  flex:1;
+}
+
+.dashboard-header .reports,
+.dashboard-header .months {
+  display: flex; /* Ativa o Flexbox para os botões */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Layout principal */
+.dashboard-layout {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Conteúdo principal (66.66%) */
+.main-content {
+  flex: 0 0 66.66%;
+  max-width: 66.66%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Saldo do dia */
+.dashboard-saldo {
+  display: flex;
+}
+
+.card.saldo {
+  flex: 1;
+  background-color: #161716;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: #1f1f21 1px solid;
+  text-align: left;
+}
+
+.card.saldo h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card.saldo img {
+  filter: invert(1); /* Torna a imagem branca */
+}
+
+.saldo-value {
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha verticalmente o texto e o ícone */
+  gap: 1.5rem; /* Espaçamento entre o texto e o ícone */
+  font-size: 2rem; /* Tamanho do texto */
+  font-weight: 700; /* Negrito */
+  margin: 0; /* Remove margens padrão */
+  color: white; /* Cor do texto */
+}
+
+.saldo-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.saldo-header span {
+  font-weight: 400;
+  font: 1rem;
+  color: #71717a;
+}
+
+/* Cards menores */
+/* Container das caixas menores */
+.dashboard-cards {
+  display: flex; /* Ativa o Flexbox */
+  gap: 1rem; /* Espaçamento horizontal entre as caixas */
+  justify-content: space-between; /* Garante que as caixas fiquem distribuídas uniformemente */
+}
+
+/* Header dos cards: alinha o ícone e o texto horizontalmente */
+.dashboard-cards .card-header {
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha verticalmente o ícone e o texto */
+  gap: 0.5rem; /* Espaçamento entre o ícone e o texto */
+  margin-bottom: 1rem; /* Espaçamento abaixo do header */
+}
+
+/* Estilo do span dentro do header */
+.dashboard-cards .card-header span {
+  font-size: 0.875rem; /* Tamanho do texto */
+  font-weight: 400; /* Peso da fonte */
+  color: #71717a; /* Cor do texto */
+}
+
+/* Estilo das caixas menores */
+.dashboard-cards .card {
+  flex: 1; /* Faz com que todas as caixas tenham o mesmo tamanho */
+  background-color: #0f0e11; /* Cor de fundo */
+  padding: 1.5rem; /* Espaçamento interno */
+  border-radius: 0.5rem; /* Bordas arredondadas */
+  border: #1f1f21 1px solid; /* Borda leve */
+  text-align: start; /* Centraliza o conteúdo */
+  color: white; /* Cor do texto */
+}
+
+.dashboard-cards .a-receber {
+  background-color: #141414; /* Fundo mais escuro */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: #1f1f21 1px solid;
+  text-align: start;
+}
+
+/* Ícones dentro das caixas */
+.dashboard-cards .card img {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do ícone */
+  filter: invert(1); /* Torna o ícone branco */
+  background: #b1b0b0; /* Fundo branco */
+  border-radius: 20%;
+  padding: 0.2rem; /* Espaçamento interno */
+}
+
+/* Título das caixas */
+.dashboard-cards .card span {
+  display: block; /* Garante que o texto fique em uma linha separada */
+  font-size: 0.875rem; /* Tamanho do texto */
+  font-weight: 400; /* Peso da fonte */
+  color: #71717a; /* Cor do texto */
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
+}
+
+/* Valor das caixas */
+.dashboard-cards .card h2 {
+  font-size: 1.5rem; /* Tamanho do valor */
+  font-weight: 700; /* Negrito */
+  margin: 0; /* Remove margens padrão */
+  color: white; /* Cor do texto */
+}
+
+.card {
+  flex: 1;
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.saldo-header img {
+  filter: invert(1);
+  background: #ffffff;
+  border-radius: 20%;
+  border-width: 5px;
+}
+/* Gráficos e Entradas */
+.dashboard-charts {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Container principal do gráfico */
+.chart-container {
+  display: flex;
+  width: 32.5% ;
+  flex-direction: column; /* Empilha o gráfico e as legendas verticalmente */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  justify-content: center;
+  background-color: #0f0e11;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: #1f1f21 1px solid;
+}
+
+/* Estilo do gráfico */
+.doughnut-chart {
+  max-width: 150px; /* Define um tamanho máximo para o gráfico */
+  margin-bottom: 1.5rem; /* Espaçamento entre o gráfico e as legendas */
+}
+
+/* Estilo das legendas */
+.chart-legend {
+  display: flex;
+  flex-direction: column; /* Organiza os itens da legenda verticalmente */
+  gap: 1rem; /* Espaçamento entre os itens da legenda */
+  width: 100%; /* Faz as legendas ocuparem toda a largura */
+}
+
+/* Estilo de cada item da legenda */
+.legend-item {
+  display: flex;
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+  justify-content: space-between; /* Espaça o texto e a porcentagem */
+  gap: 0.5rem; /* Espaçamento entre o ícone e o texto */
+  color: white;
+  font-size: 0.875rem; /* Tamanho do texto */
+  width: 100%; /* Faz cada item ocupar toda a largura */
+}
+
+/* Ícones da legenda */
+.legend-item img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
+/* Porcentagem */
+.legend-item .percentage {
+  font-weight: 700; /* Negrito */
+  color: white;
+}
+
+/* Porcentagem */
+.legend-item .percentage {
+  margin-left: auto; /* Move a porcentagem para o lado direito */
+  font-weight: 700; /* Negrito */
+  color: white;
+}
+
+.entries-container {
+  flex: 1;
+  background-color: #0f0e11;
+  border-radius: 0.5rem;
+  border: #1f1f21 1px solid;
+  padding: 1rem;
+}
+
+.entries-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #374151;
+}
+
+/* Estilo da lista de entradas */
+.entries-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.entry-item {
+  margin-bottom: 1rem; /* Espaçamento entre os itens */
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between; /* Espaça o texto e a porcentagem */
+  font-size: 0.875rem; /* Tamanho do texto */
+  color: white;
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do cabeçalho */
+}
+
+.progress-bar {
+  background-color: #1f1f21; /* Fundo da barra */
+  border-radius: 0.25rem;
+  height: 0.5rem; /* Altura da barra */
+  overflow: hidden;
+  margin-bottom: 0.5rem; /* Espaçamento abaixo da barra */
+}
+
+.progress {
+  background-color: #71717A; /* Cor da barra de progresso */
+  height: 100%; /* Preenche a altura da barra */
+  border-radius: 0.25rem;
+}
+
+/* Transações (33.33%) */
+.transactions-container {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  background-color: #0f0e11;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: #1f1f21 1px solid;
+  overflow-y: auto;
+  height: calc(100vh - 120px); /* Altura total menos o cabeçalho */
+}
+
+.transactions-container .h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #374151;
+}
+
+.transactions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transactions-list-container{
+  margin-top: 1.5rem;
+  border-top: 1px solid #374151;
+  padding-top: 1rem;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;;
+}
+
+.transactions-more {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 0.15rem 0.5rem; /* Reduz o tamanho do botão */
+  margin-left: auto; /* Move o botão para o canto direito */
+  border: #374151 1px solid;
+  border-radius: 1rem; /* Bordas arredondadas */
+  color: white; /* Cor do texto */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+/* Container do ícone */
+.transaction-icon-container {
+  width: 32px; /* Tamanho do container */
+  height: 32px;
+  padding: 0.5rem; /* Espaçamento interno */
+  border-radius: 20%; /* Torna o fundo arredondado */
+  background-color: #161716; /* Fundo fixo */
+  display: flex;
+  align-items: center; /* Centraliza o ícone verticalmente */
+  justify-content: center; /* Centraliza o ícone horizontalmente */
+}
+
+/* Estilo base para os ícones */
+.transaction-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Ícone para transações positivas */
+.transaction.positive .transaction-icon {
+  filter: invert(42%) sepia(94%) saturate(500%) hue-rotate(90deg) brightness(90%) contrast(85%); /* Verde */
+}
+
+/* Ícone para transações negativas */
+.transaction.negative .transaction-icon {
+  filter: invert(17%) sepia(93%) saturate(5822%) hue-rotate(-20deg) brightness(93%) contrast(122%);
+}
+
+/* Ícone para transações "A receber" */
+.transaction.a-receber .transaction-icon {
+  filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(80%) contrast(90%); /* Cinza */
+}
+
+.value.positive {
+  color: #10b981; /* Verde */
+}
+
+.value.negative {
+  color: #ef4444; /* Vermelho */
+}
+
+.btn {
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha o texto e a imagem verticalmente */
+  gap: 1rem; /* Espaçamento entre o texto e a imagem */
+  background-color: #339fc7;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #287ba5; /* Cor de fundo ao passar o mouse */
+}
+
+.btn img {
+  width: 16px; /* Ajusta o tamanho da imagem */
+  height: 16px;
+  filter: invert(1); /* Torna a imagem branca */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}

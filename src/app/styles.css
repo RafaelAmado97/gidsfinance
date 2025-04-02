@@ -1,0 +1,149 @@
+/* Layout principal da tela de login */
+* {
+    font-family: 'Mulish', Arial, sans-serif;
+  }
+  
+  h1,h2,h3{
+      font-weight: 700;
+  }
+  
+  p, span{
+      font-weight: 400;
+  }
+
+.login-page {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Lado esquerdo - Formulário de login */
+  .login-container {
+    width: 66.66%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+  }
+  
+  .login-box {
+    max-width: 24rem;
+    width: 100%;
+  }
+
+  .login-box h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: start;
+  }
+
+  .login-box p{
+    font-size: 0.875rem;
+    color: #9CA3AF;
+    text-align: start;
+  }
+
+  .login-form-group{
+    background: #141414;
+    border: 5px solid #141414;
+    border-radius: 10px;
+  }
+  
+  /* Logo e descrição */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .logo-container h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-left: 0.25rem;
+  }
+  
+  .login-description {
+    margin-top: 0.5rem;
+    color: #9CA3AF;
+    text-align: center;
+  }
+  
+  /* Campos do formulário */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  
+  .input-group label {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #1F2937;
+    color: white;
+    border: 1px solid #374151;
+    border-radius: 0.25rem;
+  }
+  
+  /* Botões */
+  .button-group {
+    font-family: 'Mulish', Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .button {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+  
+  .button-cancel {
+    background-color: #1F1F21;
+  }
+  
+  .button-login {
+    background-color: #339FC7;
+  }
+  
+  .button-google {
+    width: 100%;
+    background-color: #0F0E11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .button-google img {
+    margin-right: 0.5rem;
+    border-radius: 9999px;
+  }
+  
+  /* Lado direito - Imagem de fundo */
+  .image-container {
+    width: 33.33%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.5);
+  }
+  
