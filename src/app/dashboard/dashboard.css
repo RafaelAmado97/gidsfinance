@@ -506,3 +506,100 @@ span {
   display: flex;
   justify-content: flex-end;
 }
+
+/* Responsividade para telas menores (celulares) */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    gap: 1rem; /* Espaçamento entre os elementos */
+  }
+  .dashboard-nav {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 1rem; /* Espaçamento entre os itens */
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row; /* Empilha os links verticalmente */
+    gap: 0.1rem; /* Reduz o espaçamento entre os links */
+    width: 100%; /* Faz o menu ocupar toda a largura */
+    text-align: center; /* Centraliza os links */
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Espaçamento entre o ícone e o nome */
+    margin-top: 0.5rem; /* Adiciona um pequeno espaçamento acima */
+  }
+  
+  .main-content,
+  .transactions-container {
+    width: 100%; /* Faz os elementos ocuparem toda a largura */
+    max-width: 100%; /* Remove o limite de largura */
+  }
+
+  .dashboard-cards {
+    flex-direction: column; /* Empilha os cards verticalmente */
+    gap: 1rem; /* Espaçamento entre os cards */
+  }
+
+  .dashboard-cards .card {
+    width: 100%; /* Faz os cards ocuparem toda a largura */
+  }
+
+  .dashboard-charts {
+    flex-direction: column; /* Empilha os gráficos e entradas */
+    gap: 1rem; /* Espaçamento entre os elementos */
+  }
+
+  .chart-container,
+  .entries-container {
+    width: 100%; /* Faz os elementos ocuparem toda a largura */
+  }
+
+  .dashboard-header {
+    flex-direction: column; /* Empilha o título e os botões */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 1rem; /* Espaçamento entre os elementos */
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.25rem; /* Reduz o tamanho do título */
+  }
+
+  .dashboard-header .reports,
+  .dashboard-header .months {
+    width: 100%; /* Faz os botões ocuparem toda a largura */
+    justify-content: center; /* Centraliza os botões */
+  }
+
+  .transactions-container {
+    width: 100%; /* Faz o container ocupar toda a largura */
+    height: auto; /* Remove a altura fixa */
+  }
+
+  .transactions-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  .btn {
+    width: 100%; /* Faz os botões ocuparem toda a largura */
+    justify-content: center; /* Centraliza o texto e o ícone */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.25rem; /* Reduz o tamanho dos títulos */
+  }
+
+  p, span {
+    font-size: 0.875rem; /* Reduz o tamanho do texto */
+  }
+
+  .card {
+    padding: 1rem; /* Reduz o espaçamento interno dos cards */
+  }
+}

@@ -147,3 +147,42 @@
     filter: saturate(1.5);
   }
   
+  /* Responsividade para a tela de login */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1rem; /* Reduz o espaçamento interno */
+    width: 100%; /* Faz o container ocupar toda a largura */
+    max-width: none; /* Remove o limite de largura */
+  }
+
+  .login-form {
+    padding: 1rem; /* Reduz o espaçamento interno */
+  }
+
+  .login-form input,
+  .login-form button {
+    width: 100%; /* Faz os campos e botões ocuparem toda a largura */
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .login-header {
+    font-size: 1.5rem; /* Reduz o tamanho do título */
+    text-align: center; /* Centraliza o título */
+  }
+  .login-page {
+    display: flex;
+    height: 100vh; /* Garante que a altura ocupe toda a tela */
+  }
+
+/* Responsividade para a tela de login */
+@media (max-width: 768px) {
+  .image-container {
+    position: relative; /* Necessário para o comportamento do fill */
+    width: 100%; /* Ocupa toda a largura */
+    height: 100vh; /* Altura total da viewport */
+  }
+  .image-container img {
+    object-fit: cover; /* Garante que a imagem preencha o container */
+  }
+}
+}

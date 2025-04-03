@@ -66,10 +66,10 @@ export default function LoginPage() {
         {/* Lado direito - Imagem de fundo */}
         <div className="image-container">
           <Image
-            src="/image.jpeg"
-            layout="fill"
-            objectFit="cover"
+            src="/images/image.jpeg"
             alt="Imagem de fundo"
+            fill
+             style={{objectFit: "cover"}}
           />
         </div>
       </div>
